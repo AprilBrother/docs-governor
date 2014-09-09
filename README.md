@@ -1,12 +1,14 @@
 	
-	Governor management system API document (English)
+	Governor MANAGEMENT SYSTEM API DOCUMENT (English)
+
+### 领主管理系统目前开放3个api接口 授权  获取根据sniffer id 获取iBeacon列表 修改 iBeacon
 	
 	
 ###  1、Authorization
 
 ####Request address
 
-	http://sniffer.bconimg.com/api.json
+	http://governor.aprbrother.com/api.json
 
 ####Request method
 
@@ -40,9 +42,9 @@
 
 
 
-####2、get ibeacon list
+####2、get iBeacon list
 
-	http://sniffer.bconimg.com/api.json
+	http://governor.aprbrother.com/api.json
 
 ####Request method
 
@@ -64,24 +66,24 @@
 	正确返回为 json 字符串
 	内部包括字段 errorCode 属性 值为0 表示正确访问 其他为 访问错误
 	字段 msg 属性为 服务器返回的 信息
-	字段 total 属性为 ibeacon的数量
+	字段 total 属性为 iBeacon的数量
 	字段 response 属性 为 对象数组
-		每个response 对象数组里面为一个 ibeacon 对象
-		每个ibeacon 对象包括
-			uuid 属性    		说明:ibeacon唯一标示
-			mac	属性			说明:ibeaconmac地址		
-			major 属性		说明:ibeacon主要版本号
-			minor 属性		说明:ibeacon次要版本号
+		每个response 对象数组里面为一个 iBeacon 对象
+		每个iBeacon 对象包括
+			uuid 属性    		说明:iBeacon唯一标示
+			mac	属性			说明:iBeaconmac地址		
+			major 属性		说明:iBeacon主要版本号
+			minor 属性		说明:iBeacon次要版本号
 			measurepower 属性 说明:ibea校准值校准值
-			frequency属性	    说明:ibeacon属性频率
-			txPower 属性 	    说明:ibeacon剩余电量
-			passwd 属性		说明:ibeacon修改密码
+			frequency属性	    说明:iBeacon属性频率
+			txPower 属性 	    说明:iBeacon剩余电量
+			passwd 属性		说明:iBeacon修改密码
 
 
 
-####2、update ibeacon 
+####3、update iBeacon 
 
-	http://sniffer.bconimg.com/api.json
+	http://governor.aprbrother.com/api.json
 
 ####Request method
 
@@ -97,18 +99,18 @@
 	内部包括字段 action 属性为请求的 动作 值为 updatelist,
 	内部包括字段 param  属性为 一个对象
 	param  属性 包括属性 uid	用户的 uid	
-	param  属性 包括属性 sniffermac	用户的 ibeacon 所属的sniffermac地址
+	param  属性 包括属性 sniffermac	用户的 iBeacon 所属的sniffermac地址
 	param  属性 包括属性 token	用户的 token
-	param  属性 包括属性 data 为要修改的 ibeacon 信息
+	param  属性 包括属性 data 为要修改的 iBeacon 信息
 		data 为一个对象数组 每个对象包括如下信息
-			uuid 属性 			说明:ibeacon唯一标示
-			mac 属性			    说明:ibeaconnac地址
-			major 属性			说明:ibeacon主要版本号
-			minor 属性			说明:ibeacon次要版本号
-			measuredpower 属性    说明:ibeacon校准值校准值
-			rssi 属性				说明:ibeacon信号强度
-			status 属性			说明:ibeacon 状态信息
-			batterylevel 属性 	说明:ibeacon剩余电量
+			uuid 属性 			说明:iBeacon唯一标示
+			mac 属性			    说明:iBeaconnac地址
+			major 属性			说明:iBeacon主要版本号
+			minor 属性			说明:iBeacon次要版本号
+			measuredpower 属性    说明:iBeacon校准值校准值
+			rssi 属性				说明:iBeacon信号强度
+			status 属性			说明:iBeacon 状态信息
+			batterylevel 属性 	说明:iBeacon剩余电量
 
 ####Response Data Description
 	
@@ -128,7 +130,7 @@
 
 ####请求地址 
 
-	http://sniffer.bconimg.com/api.json
+	http://governor.aprbrother.com/api.json
 
 ####请求方式 
 
@@ -162,9 +164,9 @@
 
 
 
-####2、获取ibeacon列表
+####2、获取iBeacon列表
 
-	http://sniffer.bconimg.com/api.json
+	http://governor.aprbrother.com/api.json
 
 ####请求方式 
 
@@ -186,24 +188,24 @@
 	正确返回为 json 字符串
 	内部包括字段 errorCode 属性 值为0 表示正确访问 其他为 访问错误
 	字段 msg 属性为 服务器返回的 信息
-	字段 total 属性为 ibeacon的数量
+	字段 total 属性为 iBeacon的数量
 	字段 response 属性 为 对象数组
-		每个response 对象数组里面为一个 ibeacon 对象
-		每个ibeacon 对象包括
-			uuid 属性    		说明:ibeacon唯一标示
-			mac	属性			说明:ibeaconmac地址		
-			major 属性		说明:ibeacon主要版本号
-			minor 属性		说明:ibeacon次要版本号
+		每个response 对象数组里面为一个 iBeacon 对象
+		每个iBeacon 对象包括
+			uuid 属性    		说明:iBeacon唯一标示
+			mac	属性			说明:iBeaconmac地址		
+			major 属性		说明:iBeacon主要版本号
+			minor 属性		说明:iBeacon次要版本号
 			measurepower 属性 说明:ibea校准值校准值
-			frequency属性	    说明:ibeacon属性频率
-			txPower 属性 	    说明:ibeacon剩余电量
-			passwd 属性		说明:ibeacon修改密码
+			frequency属性	    说明:iBeacon属性频率
+			txPower 属性 	    说明:iBeacon剩余电量
+			passwd 属性		说明:iBeacon修改密码
 
 
 
-####2、修改ibeacon数据
+####3、修改iBeacon数据
 
-	http://sniffer.bconimg.com/api.json
+	http://governor.aprbrother.com/api.json
 
 ####请求方式 
 
@@ -219,19 +221,17 @@
 	内部包括字段 action 属性为请求的 动作 值为 updatelist,
 	内部包括字段 param  属性为 一个对象
 	param  属性 包括属性 uid	用户的 uid	
-	param  属性 包括属性 sniffermac	用户的 ibeacon 所属的sniffermac地址
+	param  属性 包括属性 sniffermac	用户的 iBeacon 所属的sniffermac地址
 	param  属性 包括属性 token	用户的 token
-	param  属性 包括属性 data 为要修改的 ibeacon 信息
+	param  属性 包括属性 data 为要修改的 iBeacon 信息
 		data 为一个对象数组 每个对象包括如下信息
-			uuid 属性 			说明:ibeacon唯一标示
-			mac 属性			    说明:ibeaconnac地址
-			major 属性			说明:ibeacon主要版本号
-			minor 属性			说明:ibeacon次要版本号
-			measuredpower 属性    说明:ibeacon校准值校准值
-			rssi 属性				说明:ibeacon信号强度
-			status 属性			说明:ibeacon 状态信息
-			batterylevel 属性 	说明:ibeacon剩余电量
+			uuid 属性 			说明:iBeacon唯一标示
+			mac 属性			    说明:iBeaconnac地址
+			major 属性			说明:iBeacon主要版本号
+			minor 属性			说明:iBeacon次要版本号
+			measuredpower 属性    说明:iBeacon校准值校准值
+			rssi 属性				说明:iBeacon信号强度
+			status 属性			说明:iBeacon 状态信息
+			batterylevel 属性 	说明:iBeacon剩余电量
 	
-
-
 
