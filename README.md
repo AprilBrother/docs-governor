@@ -27,7 +27,8 @@
 ####Response Data Description
 
 	 errorCode 0 success
-	 uid	
+	 uid	 user id
+	 token 		token	
 	 errorCode 11001 username fail
 	 errorCode 11002 password fail
 	 msg     errorinfo
@@ -59,27 +60,24 @@
 
 ####Response Data Description
 
-	正确返回为 json 字符串
-	内部包括字段 errorCode 属性 值为0 表示正确访问 其他为 访问错误
-	字段 msg 属性为 服务器返回的 信息
-	字段 total 属性为 iBeacon的数量
-	字段 response 属性 为 对象数组
-		每个response 对象数组里面为一个 iBeacon 对象
-		每个iBeacon 对象包括
-			uuid 属性    		说明:iBeacon唯一标示
-			mac	属性			说明:iBeaconmac地址		
-			major 属性		说明:iBeacon主要版本号
-			minor 属性		说明:iBeacon次要版本号
-			measurepower 属性 说明:ibea校准值校准值
-			frequency属性	    说明:iBeacon属性频率
-			txPower 属性 	    说明:iBeacon剩余电量
-			passwd 属性		说明:iBeacon修改密码
+	errorCode 0 success
+	msg 	message info
+	total 	iBeacin count
+	response iBeacon list
+		uuid 
+		mac			
+		major 
+		minor 
+		measurepower
+		frequency
+		txPower
+		passwd 
 
 
 
 ####3、update iBeacon 
 
-	http://governor.aprbrother.com/api.json
+	http://governor.aprbrother.com/api.php
 
 ####Request method
 
@@ -90,30 +88,32 @@
 	jsonstr
 
 ####Request Parameter Description
-	
-	jsonstr 为 json 字符串
-	内部包括字段 action 属性为请求的 动作 值为 updatelist,
-	内部包括字段 param  属性为 一个对象
-	param  属性 包括属性 uid	用户的 uid	
-	param  属性 包括属性 sniffermac	用户的 iBeacon 所属的sniffermac地址
-	param  属性 包括属性 token	用户的 token
-	param  属性 包括属性 data 为要修改的 iBeacon 信息
-		data 为一个对象数组 每个对象包括如下信息
-			uuid 属性 			说明:iBeacon唯一标示
-			mac 属性			    说明:iBeaconnac地址
-			major 属性			说明:iBeacon主要版本号
-			minor 属性			说明:iBeacon次要版本号
-			measuredpower 属性    说明:iBeacon校准值校准值
-			rssi 属性				说明:iBeacon信号强度
-			status 属性			说明:iBeacon 状态信息
-			batterylevel 属性 	说明:iBeacon剩余电量
+
+	jsonstr:{
+		"action": "updatelist",
+		"param": {
+				"uid":1,
+				"token":"x3CYbrKln2dtWKasx6nBn8ZTcKifZW5XbFtvq3FxnIbbqcqmpZPSlVVxpHOTbZxYm2Vqa5drZGxweaWpZZzR0Yhx2G5obIejVXGac5NtmnHf",
+				"sniffermac":"38:0B:40:CC:62:0E",
+				"data":[
+					{
+						"uuid":"e2c56db5-dffb-48d2-b060-d0f5a71096e0",
+						"mac":"D03972A5C013",
+						"major":"1",
+						"minor":"2",
+						"measuredpower":"",
+						"rssi":"-58",
+						"status":"1"
+						"batterylevel":"10"
+					}
+				]
+			}
+	}
 
 ####Response Data Description
 	
-		正确返回为 json 字符串
-	    内部包括字段 errorCode 属性 值为0 表示正确访问 其他为 访问错误
-		内部包括字段 msg 为服务器响应信息
-
+		errorCode 0  success
+		msg  message info
 
 	
 
