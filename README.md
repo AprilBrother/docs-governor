@@ -9,7 +9,7 @@
 
 ####Request method
 
-	post
+	POST
 
 ####Request parameters
 
@@ -40,7 +40,7 @@
 
 ####Request method
 
-	post
+	POST
 
 ####Request parameters
 
@@ -62,7 +62,7 @@
 
 	errorCode 0 success
 	msg 	message info
-	total 	iBeacin count
+	total 	iBeacon count
 	response iBeacon list
 		uuid 
 		mac			
@@ -101,7 +101,7 @@
 						"mac":"D03972A5C013",
 						"major":"1",
 						"minor":"2",
-						"measuredpower":"",
+						"measuredpower":"20",
 						"rssi":"-58",
 						"status":"1"
 						"batterylevel":"10"
