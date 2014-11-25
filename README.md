@@ -1,14 +1,11 @@
 	
 	Governor MANAGEMENT SYSTEM API DOCUMENT (English)
 
-### 领主管理系统目前开放3个api接口 授权  获取根据sniffer id 获取iBeacon列表 修改 iBeacon
-	
-	
 ###  1、Authorization
 
 ####Request address
 
-	http://governor.aprbrother.com/api.json
+	http://governor.aprbrother.com/api.php
 
 ####Request method
 
@@ -20,31 +17,25 @@
 
 ####Request Parameter Description
 	
-	jsonstr 为 json 字符串
-	内部包括字段 action 属性为请求的 动作 值为 login,
-	内部包括字段 param  属性为 一个对象
-	param 内部包括属性username为用户名,password 为密码
+	jsonstr:{
+		"action": "login",
+		"param": {
+			"username": "xxx@gmail.com",
+			"password":"xxx"}
+	}
 
 ####Response Data Description
 
-	正确返回为 json 字符串
-	内部包括字段 errorCode 属性 值为0 表示正确访问 其他为 访问错误
-	字段 msg 属性为 服务器返回的 信息
-	字段 response 属性 为 请求数据信信息 内部包括 uid 用户的 id token 用户的 token 以后用到
-
-	错误返回为 json 字符串
-	内部包括字段 errorCode 属性 值为11001 表示授权错误 用户名错误
-	字段 msg 属性为 服务器返回的 密码不正确
-
-	错误返回为 json 字符串
-	内部包括字段 errorCode 属性 值为11002 表示授权错误 密码错误
-	字段 msg 属性为 服务器返回的 密码不正确
-
-
-
+	 errorCode 0 success
+	 uid	
+	 errorCode 11001 username fail
+	 errorCode 11002 password fail
+	 msg     errorinfo
+	 
+	 
 ####2、get iBeacon list
 
-	http://governor.aprbrother.com/api.json
+	http://governor.aprbrother.com/api.php
 
 ####Request method
 
@@ -55,11 +46,16 @@
 	jsonstr
 
 ####Request Parameter Description
+
+	jsonstr:{
+		"action": "getlist",
+		"param": {
+			"uid": "xxx@gmail.com",
+			"project_id":1
+			"token":"x3CYbrKln2dtWKasx6nBn8ZTcKifZW5XbFtvq3FxnIbbqcqmpZPSlVVxpHOTbZxYm2Vqa5drZGxweaWpZZzR0Yhx2G5obIejVXGac5htnbM="
+			}
+	}
 	
-	jsonstr 为 json 字符串
-	内部包括字段 action 属性为请求的 动作 值为 getlist,
-	内部包括字段 param  属性为 一个对象
-	param 内部包括属性uid为用户id,project_id 为项目id token为成功登录之后获取的 token
 
 ####Response Data Description
 
