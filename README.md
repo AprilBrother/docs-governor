@@ -126,7 +126,7 @@
 
 ####请求地址 
 
-	http://governor.aprbrother.com/api.json
+	http://governor.aprbrother.com/api.php
 
 ####请求方式 
 
