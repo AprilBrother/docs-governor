@@ -94,7 +94,7 @@
 		"param": {
 				"uid":1,
 				"token":"x3CYbrKln2dtWKasx6nBn8ZTcKifZW5XbFtvq3FxnIbbqcqmpZPSlVVxpHOTbZxYm2Vqa5drZGxweaWpZZzR0Yhx2G5obIejVXGac5NtmnHf",
-				"sniffermac":"38:0B:40:CC:62:0E",
+				"sniffermac":"0x380B40CC620E",
 				"data":[
 					{
 						"uuid":"e2c56db5-dffb-48d2-b060-d0f5a71096e0",
