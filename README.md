@@ -102,8 +102,7 @@
 						"major":"1",
 						"minor":"2",
 						"measuredpower":"20",
-						"rssi":"-58",
-						"status":"1"
+						"status":"1",
 						"batterylevel":"10"
 					}
 				]
@@ -226,7 +225,6 @@
 			major 属性			说明:iBeacon主要版本号
 			minor 属性			说明:iBeacon次要版本号
 			measuredpower 属性    说明:iBeacon校准值校准值
-			rssi 属性				说明:iBeacon信号强度
 			status 属性			说明:iBeacon 状态信息
 			batterylevel 属性 	说明:iBeacon剩余电量
 	
